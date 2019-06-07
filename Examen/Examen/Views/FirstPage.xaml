@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Examen.Views.FirstPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand">
+            <StackLayout HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand"
+                         Orientation="Horizontal">
+                <Label 
+                       Text="Favorite Color:"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Entry
+                       Text="{Binding FavortieColor}"
+                       HeightRequest="40"
+                       WidthRequest="300"     
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       BackgroundColor="White"
+                       HorizontalTextAlignment="Center" />
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand"
+                         Orientation="Horizontal">
+                <Label 
+                       Text="Favortie Band:"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+                <Entry
+                       Text="{Binding FavoriteBand}"
+                       HeightRequest="40"
+                       HorizontalOptions="CenterAndExpand"
+                       WidthRequest="300"     
+                       VerticalOptions="CenterAndExpand"
+                       BackgroundColor="White"
+                       HorizontalTextAlignment="Center" />
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="CenterAndExpand"
+                         Orientation="Horizontal">
+                <Label 
+                       Text="Like Xamarin:"
+                       HeightRequest="40"
+                       BackgroundColor="DarkGray"  
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Small" FontAttributes="Bold"
+                       VerticalTextAlignment="Center" 
+                       Margin="1"/>
+
+                <Switch IsToggled="{Binding XamarinLike}"
+                        BackgroundColor="White"
+                        WidthRequest="300"
+                        HeightRequest="40"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <Button
+                    Command="{Binding ContinueClicked}"
+                    FontSize="Small" FontAttributes="Bold"
+                    Margin="1"
+                    BackgroundColor="Gray"
+                    Text="Continue" />
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
